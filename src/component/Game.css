@@ -1,0 +1,24 @@
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.start {
+  width: 200px;
+  height: 25px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background: burlywood;
+}
+
+.start:hover {
+  background: violet;
+}
+.text {
+  margin-top: 50px;
+}
