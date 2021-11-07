@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Board from "./Board";
 import "./Game.css";
 import helpFunc from "../helpFunction";
-import { Button } from "react-bootstrap";
+import { Button, Alert } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -38,13 +38,14 @@ export default function Game() {
     <div className="wrapper">
       {startNewGame()}
       <Board squares={board} click={handleClick} />
-      <span className="text">
+
+      <Alert variant="info" className="text">
         {!winner && board.filter((elem) => elem !== null).length === 9
           ? "НИЧЬЯ"
           : { winner }
           ? "Выиграл" + "-" + winner
           : "Сейчас ходит" + "-" + (isNext ? "X" : "0")}
-      </span>
+      </Alert>
     </div>
   );
 }
