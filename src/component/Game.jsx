@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Board from "./Board";
 import "./Game.css";
 import helpFunc from "../helpFunction";
+import { Button } from "react-bootstrap";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Game() {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -20,14 +23,14 @@ export default function Game() {
 
   const startNewGame = () => {
     return (
-      <button
-        className="start"
+      <Button
+        variant="outline-primary"
         onClick={() => {
           setBoard(Array(9).fill(null));
         }}
       >
         Очистить поле игры
-      </button>
+      </Button>
     );
   };
 
